@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome To 天意人间舫
+title: 廖宇旺个人博客
 ---
 
 ## 对博客的理解

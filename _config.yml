@@ -7,14 +7,14 @@ kramdown:
 
 # 作者信息
 author:
-  name: 晚晴幽草
-  email: jeffjade@163.com
-  link: http://www.jeffjade.com
-  weibo: http://weibo.com/3235949794
-  github: http://github.com/nicejade
+  name: 爱挑战的旺仔
+  email: 20141021@163.com
+  link: http://www.sevenliao.cn
+  weibo: http://weibo.com/2268319503
+  github: http://github.com/sevenliao
 
 # 站点信息
-title: 廖宇旺个人博客
+title: 旺仔的博客
 description: 个人博客(Jekyll);整理、记载关于工具/资源/生活/技术/读书/影音等经验和思考;
 url: http://sevenliao.github.io
 rss_url: /pages/atom.xml

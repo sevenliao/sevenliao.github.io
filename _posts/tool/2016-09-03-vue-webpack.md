@@ -41,7 +41,7 @@ description: Vue + webpack 项目实践
 
 首先，代码分两部分，一部分是 html，同时也是视图模板，里面包含一个值为 <code>message</code> 的文本何一个相同值的输入框；另一部分是 script，它创建了一个 vm 对象，其中绑定的 dom 结点是 <code>#demo</code>，绑定的数据是 <code>{message: 'Hello Vue.js'}</code>，最终页面的显示效果就是一段 <code>Hello Vue.js</code> 文本加一个含相同文字的输入框，更关键的是，由于数据是双向绑定的，所以我们修改文本框内文本的同时，第一段文本和被绑定的数据的 <code>message</code> 字段的值都会同步更新——而这底层的复杂逻辑，Vue.js 已经全部帮你做好了。
 
-<img src="http://img1.tbcdn.cn/L1/461/1/088c2fe6a59cf1babdb83e963e844bc62b96c8c1" alt="_2015_06_24_11_00_20">
+![_2015_06_24_11_00_20!](http://img1.tbcdn.cn/L1/461/1/088c2fe6a59cf1babdb83e963e844bc62b96c8c1)
 
 <!--more-->
 

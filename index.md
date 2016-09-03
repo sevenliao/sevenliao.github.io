@@ -22,4 +22,4 @@ title: 旺仔的个人博客
 
 此博客的源码现托管于[Github](https://github.com/nicejade/nicejade.github.io)上，如果有任何改进意见，欢迎讨论。
 
-## **[爱挑战的旺仔](http://weibo.com/u/2268319503)**
+## **[新浪微博：爱挑战的旺仔](http://weibo.com/u/2268319503)**

@@ -21,7 +21,7 @@ rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
 avatar: http://tva3.sinaimg.cn/crop.119.17.460.460.180/8733cf0fgw1ej4fwzdxtxj20hs0dan0g.jpg
-favicon: http://www.jeffjade.com/img/xuan.ico
+favicon: https://github.com/sevenliao/sevenliao.github.io/tree/master/assets/images/favicon.jpg
 
 # google analytics 设置
 ga:

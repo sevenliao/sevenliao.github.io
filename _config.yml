@@ -8,26 +8,26 @@ kramdown:
 # 作者信息
 author:
   name: 爱挑战的旺仔
-  email: 20141021@163.com
+  email: liaoyuwang@126.com
   link: http://www.sevenliao.cn
   weibo: http://weibo.com/2268319503
   github: http://github.com/sevenliao
 
 # 站点信息
 title: 旺仔的博客
-description: 个人博客(Jekyll);整理、记载关于工具/资源/生活/技术/读书/影音等经验和思考;
-url: http://sevenliao.github.io
+description: 个人博客(liao),爱挑战的旺仔,旺仔,关于工具/资源/生活/技术/读书/影音等经验和思考,技术,网站;
+url: http://sevenliao.cn
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
 avatar: http://tva3.sinaimg.cn/crop.119.17.460.460.180/8733cf0fgw1ej4fwzdxtxj20hs0dan0g.jpg
-favicon: https://sevenliao.cn/assets/images/seven.ico
+favicon: https://sevenliao.cn/assets/images/favicon.png
 
 # google analytics 设置
 ga:
   id: UA-67901984-1
-  url: nicejade.github.io
+  url: sevenliao.github.io
 
 # disqus 设置
 disqus:
-  shortname: yunjeffblog
+  shortname: sevenliao

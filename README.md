@@ -1,12 +1,11 @@
-### 锦瑟华年集
+### 旺仔博客集合
 
 此博客原作者博文地址：[http://yansu.org](http://yansu.org)
 
-个人常用博客-Hexo地址: [http://www.jeffjade.com](http://www.jeffjade.com)
+个人常用博客地址: [http://www.13culb.com](http://www.13culb.com)
 
 ### Fork说明
-14年有用Jekyll搭建过Blog；无奈那时Jekyll还无中文文档以及资料; 每每折腾起来，颇为费劲；15年初有转投Hexo怀抱，即便现在使用Hexo也觉其很是方便。
-怎奈养成了对于不错主题就想一试其美的冲动；故而此次回归于Jekyll，欲成就另一个私人空间的同时，也是想试用下写得不错的响应式主题。
+折腾起来,个人网站就有啦
 
 ### 安装说明
 

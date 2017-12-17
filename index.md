@@ -18,7 +18,7 @@ title: 旺仔
 
 ## 个人官网-[liao](http://13culb.com)
 
-这个博客通为个人的技术站点和内容站点,如需了解更多信息,可以跳转到个人网站主页了解更多![详情](http://13culb.com)。
+这个博客通为个人的技术站点和内容站点,如需了解更多信息,可以跳转到个人网站主页了解更多![liao](http://13culb.com)
 
 此博客的源码现托管于[Github](https://github.com/sevenliao/sevenliao.github.io)上，如果有任何改进意见，欢迎讨论。
 

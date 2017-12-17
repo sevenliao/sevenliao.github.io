@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 旺仔的个人博客
+title: 旺仔
 ---
 
-## 现在还未优化好！感谢大家继续支持……
+## 还在努力优化！感谢大家继续支持!……
 
 我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。
 
@@ -14,12 +14,12 @@ title: 旺仔的个人博客
 ---
 
 
-对于博客内容以`资源`，`工具`，`生活`部分为主；一方面，个人也对资源工具颇感兴趣；另一方面也觉这些心得分享，尚有很大补充完善的空间。而此博客要感谢 **[晚晴幽草轩](http://www.jeffjade.com)** 的大力支持，此博客重在分享。
+对于博客内容以`资源`，`工具`，`生活`部分为主；一方面，个人也对资源工具颇感兴趣；另一方面也觉这些心得分享，尚有很大补充完善的空间。
 
-## 博客平台
+## 个人官网-[liao](http://13culb.com)
 
-这个博客通过 [Jekyll](http://jekyllrb.com/) 生成，部署在 [Github](https://pages.github.com)，主题基于 [3-Jekyll](https://github.com/P233/3-Jekyll) 修改生成，Fork自[yansu.org](https://github.com/suyan/suyan.github.io) ，同时也感谢 [Peiwen Lu](https://github.com/P233) 开发出这漂亮的主题。
+这个博客通为个人的技术站点和内容站点,如需了解更多信息,可以跳转到个人网站主页了解更多![详情](http://13culb.com)。
 
-此博客的源码现托管于[Github](https://github.com/nicejade/nicejade.github.io)上，如果有任何改进意见，欢迎讨论。
+此博客的源码现托管于[Github](https://github.com/sevenliao/sevenliao.github.io)上，如果有任何改进意见，欢迎讨论。
 
 ## **[新浪微博：爱挑战的旺仔](http://weibo.com/u/2268319503)**

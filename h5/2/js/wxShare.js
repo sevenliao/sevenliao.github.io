@@ -5,7 +5,8 @@
 	if(isWeiXin()){
         $.ajax({
             type: 'GET',
-            url: 'http://share.yunnangames.cn/index.php?c=view&a=getWxConf&yy_appid=9416&url='+encodeURIComponent(location.href),
+            // url: 'http://share.yunnangames.cn/index.php?c=view&a=getWxConf&yy_appid=9416&url='+encodeURIComponent(location.href),
+            url: 'http://www.sevenliao.cn//h5/2/index.html',
             dataType: 'json',
             success: function(data){
                 console.log(encodeURIComponent(location.href),"=====")

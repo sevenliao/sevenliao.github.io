@@ -5,9 +5,10 @@
 	if(isWeiXin()){
         $.ajax({
             type: 'GET',
-            url: '//266.com/php/jssdk_new.php?url='+encodeURIComponent(location.href),
+            url: 'http://share.yunnangames.cn/index.php?c=view&a=getWxConf&yy_appid=9416&url='+encodeURIComponent(location.href),
             dataType: 'json',
             success: function(data){
+                console.log(encodeURIComponent(location.href),"=====")
                 wx.config({
                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
                    appId: data.appId, // 必填，公众号的唯一标识
@@ -50,21 +51,6 @@ function isWeiXin() {
  */
 function wxShare() {
 	wx.ready(function() {
-	
-        //随机分享显示内容
-        var random = parseInt(Math.random()*5);
-        if(random==0){
-            window.shareData.tContent = window.shareData.tContent||'很有新意的一款小游戏，清新低调有内涵。';
-        }else if(random==1){
-            window.shareData.tContent = window.shareData.tContent||'这游戏有毒，一玩就停不下来了，不信来试试。';
-        }else if(random==2){
-            window.shareData.tContent = window.shareData.tContent||'这个游戏还不错，我也就玩了五十多次而已。';
-        }else if(random==3){
-            window.shareData.tContent = window.shareData.tContent||'这个游戏我很喜欢，是朋友我才告诉你的哦。';
-        }else{
-            window.shareData.tContent = window.shareData.tContent||'谁比我厉害，智商不够用的别玩这游戏。';
-        }
-
 		//分享给朋友
 		wx.onMenuShareAppMessage({
 			trigger: function(res) {
@@ -149,33 +135,6 @@ function shareSuccess(type){
     	system = 1;   //PC
     }
 
-    //  查看是否登录
-    if(getCookie("userinfo_266")){
-        var userData = JSON.parse(getCookie("userinfo_266"));
-        var user_bid = userData.bid;
-        var user_token = userData.token;
-    }else {
-        if(IsPC()){
-            var user_bid = window.GetPCQueryString("bid");
-            var user_token = window.GetPCQueryString("token");       
-        }else {
-            var user_bid = window.GetQueryString("bid");
-            var user_token = window.GetQueryString("token");
-        }
-    }
-
-	switch(type){
-		case 0:
-			break;
-		case 1:
-		    $.getScript('//266.com/index.php?a=allshare&m=feed&game='+window.gameName+'&system='+system+'&bid='+user_bid+'&token='+user_token,function (res,status) {});
-		    break;
-		case 2:
-			$.getScript('//266.com/index.php?a=myshare&m=feed&game='+window.gameName+'&system='+system+'&bid='+user_bid+'&token='+user_token,function (res,status) {});
-			break;
-		default:
-			console.log("type error~");
-	}
 }
 
 /*
@@ -226,44 +185,3 @@ function GetPCQueryString(name) {
     if (r!=null) return (r[2]); return null;
 };
 
-/*
- * 设置分数类游戏结束的分享语
- * @param {Number} score  分数
- * @allparam
- */
-window.shareData.endShareScore = function(score){
-	//随机分享显示内容
-    var random = parseInt(Math.random()*5);
-    if(random==0){
-        window.shareData.tContent = "轻松玩到"+score+"分，毫无压力，小伙伴们快来挑战我吧。";
-    }else if(random==1){
-        window.shareData.tContent = "我玩这个小游戏达到"+score+"分，简直无敌了，谁敢一战？！";
-    }else if(random==2){
-        window.shareData.tContent = "又一次破了纪录，"+score+"分的战绩，不服来战！";
-    }else if(random==3){
-        window.shareData.tContent = "真是愈战愈勇停不下来了，当前"+score+"分，继续挑战！";
-    }else{
-        window.shareData.tContent = score+"分,谁比我厉害，智商不够用的别玩这游戏。";
-    }
-}
-
-/*
- * 设置通关类游戏结束的分享语
- * @param {Number} pass  通关数
- * @allparam
- */
-window.shareData.endSharePass = function(pass){
-	//随机分享显示内容
-    var random = parseInt(Math.random()*5);
-    if(random==0){
-        window.shareData.tContent = "轻松玩到"+pass+"关，毫无压力，小伙伴们快来挑战我吧。";
-    }else if(random==1){
-        window.shareData.tContent = "我玩这个小游戏达到"+pass+"关，简直无敌了，谁敢一战？！";
-    }else if(random==2){
-        window.shareData.tContent = "又一次破了纪录，"+pass+"关的战绩，不服来战！";
-    }else if(random==3){
-        window.shareData.tContent = "真是愈战愈勇停不下来了，当前"+pass+"关，继续挑战！";
-    }else{
-        window.shareData.tContent = "第"+pass+"关,谁比我厉害，智商不够用的别玩这游戏。";
-    }
-}

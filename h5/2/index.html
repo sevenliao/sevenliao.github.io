@@ -161,12 +161,14 @@
             })
         }
     }
-    window.shareData = {
-        'imgUrl': 'http://266.com/pages/dandong/images/icon.png',
-        'timeLineLink': 'http://www.sevenliao.cn//h5/2/',
-        'tTitle': '限时福利，打斗地主比赛赢话费、手机，先到先得！',
-        'tContent':'话费天天赢，Iphone手机月月送，来试试手气吧！'
-    };
+    // window.shareData = {
+    //     'imgUrl': 'http://266.com/pages/dandong/images/icon.png',
+    //     'timeLineLink': 'http://www.sevenliao.cn//h5/2/',
+    //     'tTitle': '限时福利，打斗地主比赛赢话费、手机，先到先得！',
+    //     'tContent':'话费天天赢，Iphone手机月月送，来试试手气吧！'
+    // };
+    // wxShare.configJMPShare(APIHost, 标题,文案描素,img,分享地址);
+    window.wxShare.configJMPShare('http://www.sevenliao.cn//h5/2/', '分享测试先得！','文案描素','http://266.com/pages/dandong/images/icon.png','http://www.sevenliao.cn//h5/2/index.html')
     </script>
     <script src='js/wxShare.js'></script>
 </body>

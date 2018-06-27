@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>私人练手测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <script src="./js/rem.js"></script>
+    <!--分享遮罩层-->
+    <div class="shareBg">
+        <img class="share" src="images/share.png"/>
+    </div>
+    <div id="mask">
+        <img src="images/dltip.png"alt="">
+    </div>
+    <div class="changeScreen">
+        <span>为了更好的体验，请使用竖屏浏览</span>
+        <img src="images/rotate.png"/>
+    </div>
+    <!-- Swiper -->
+    <div class="main">
+        <img src="images/btnFirst.png" class="btnFirst">       
+        <img src="images/first.png" class="firstImg">
+        <img src="images/btnAll.png" class="btnAll_1">
+        <img src="images/second.png"  class="secondImg">
+        <img src="images/btnAll.png" class="btnAll_1">
+        <img src="images/third.png"  class="thirdImg">
+        <img src="images/btnAll.png" class="btnAll_1">
+        <img src="images/fourth.png" class="fourthImg">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./images/1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/3.png)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <img src="images/btnShare.png" class="btnShare">
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+    <script src='js/wxShare.js'></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        }
+    });
+    var type = (function isSystem(){
+        //设备类型
+        var userAgentInfo = "PC";
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        for (var v = 0; v < Agents.length; v++) {
+            if (navigator.userAgent.indexOf(Agents[v]) > 0) {
+                userAgentInfo = Agents[v];
+                break;
+            }
+        }
+        if(userAgentInfo == "Android"){
+            return 2;
+        }else if(userAgentInfo == "iPhone" || userAgentInfo == "iPod"){
+            return 3;
+        }
+    })() 
+    $("#mask").off().on("click",function(){
+        $("#mask").hide()
+    })
+    $(".btnFirst").off().on("click",function(){
+        alert("下载")
+    })
+    $(".btnAll_1").off().on("click",function(){
+        alert("下载")
+    })
+    $(".btnShare").off().on("click",function(){
+        $(".shareBg").show();
+    })
+    $('.shareBg').off().on("click",function(){
+        $(".shareBg").hide();
+    });
+    var Tool = {
+        setCookie : function(name,value, hour){
+            var hours = hour || 2; 
+            var exp = new Date(); 
+            exp.setTime(exp.getTime() + hours*60*60*1000); 
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString(); 
+        },
+        getCookie : function(name){
+            var arr, reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+                return unescape(arr[2]); 
+            }else{
+                return null; 
+            } 
+        },
+        getQueryString : function(str){
+            var reg = new RegExp("(^|&)" + str + "=([^|&]*)(&|$)","i");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            console.log(r)
+            if( r != null){
+                return unescape(r[2]);
+            }
+            return null;
+        },
+        isIOS : function(){
+            return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        },
+        isWeixin : function() {
+            var a = navigator.userAgent.toLowerCase();
+            return "micromessenger" == a.match(/MicroMessenger/i) ? !0 : !1
+        },
+        isAndroid : function() {
+            var a = navigator.userAgent,
+                b = (navigator.appVersion, a.indexOf("Android") > -1 || a.indexOf("Linux") > -1);
+            return b 
+        },
+        isSafari : function(){
+            var a = navigator.userAgent,
+                b = (navigator.appVersion, a.indexOf("Safari") > -1 && a.indexOf("Version") > -1);
+            return b 
+        }
+    }
+    var hash = window.location.href;
+    console.log(hash)
+    // 地方应用版本仅IOS903以上的大厅版本使用cookie存储和pkey上报
+    // 上报环境：ios903以上版本+safari浏览器环境+有pkey和aid通信
+    // 以下供参考
+
+    if(Tool.isIOS() && !Tool.isWeixin() && Tool.isSafari() && (location.href.indexOf("pkey=")>-1 && location.href.indexOf("&aid=")>-1)){
+
+        var ipkeyName = Tool.getQueryString("pkey"),
+            ipkeyValue = Tool.getQueryString("aid");
+            ftype = Tool.getQueryString("ftype")
+
+        Tool.setCookie(ipkeyName,ipkeyValue);
+        Tool.setCookie("ftype",ftype);
+
+        if(Tool.getCookie(ipkeyName)){
+            var aid = Tool.getQueryString("aid");
+            $.ajax({
+                type : "get",
+                url : "http://mvsnspus01.ifere.com/ddfqp/index.php?action=actcenter.getHttpIosCookie&aid="+aid,
+                dataType : "json"
+            })
+        }
+    }
+    // window.shareData = {
+    //     'imgUrl': 'http://266.com/pages/dandong/images/icon.png',
+    //     'timeLineLink': 'http://www.sevenliao.cn//h5/2/',
+    //     'tTitle': '限时福利，打斗地主比赛赢话费、手机，先到先得！',
+    //     'tContent':'话费天天赢，Iphone手机月月送，来试试手气吧！'
+    // };
+    // wxShare.configJMPShare(APIHost, 标题,文案描素,img,分享地址);
+    window.wxShare.configJMPShare('http://www.sevenliao.cn//h5/2/', '分享测试先得！','文案描素','http://266.com/pages/dandong/images/icon.png','http://www.sevenliao.cn//h5/2/index.html')
+    </script>
+    <!--<script src='js/wxShare.js'></script>-->
+</body>
+</html>

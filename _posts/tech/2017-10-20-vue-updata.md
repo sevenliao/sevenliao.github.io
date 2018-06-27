@@ -89,5 +89,3 @@ console.log(this.$el)
 ![vue生命周期图!](http://img.blog.csdn.net/20170303180404473?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjQwNzM4ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 这就是vue的生命周期，很简单吧。
-
-

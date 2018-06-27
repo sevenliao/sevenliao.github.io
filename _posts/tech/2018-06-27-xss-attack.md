@@ -46,8 +46,6 @@ xss跨站脚本攻击(Cross Site Scripting)，是一种经常出现在web应用�
 
 8.拆分跨站法，将xss攻击的代码拆分开来，适用于应用程序没有过滤 XSS关键字符（如<、>）却对输入字符长度有限制的情况下；
 
-9.DOM型的XSS主要是由客户端的脚本通过DOM动态地输出数据到页面上，它不依赖于提交数据到服务器，而是从客户端获得DOM中的数据在本地执行。容易导致DOM型的XSS的输入源包括：Document.URL、Location(.pathname|.href|.search|.hash)、
-
-Document.referrer、Window.name、Document.cookie、localStorage/globalStorage；
+9.DOM型的XSS主要是由客户端的脚本通过DOM动态地输出数据到页面上，它不依赖于提交数据到服务器，而是从客户端获得DOM中的数据在本地执行。容易导致DOM型的XSS的输入源包括：Document.URL、Location(.pathname|.href|.search|.hash)、Document.referrer、Window.name、Document.cookie、localStorage/globalStorage；
 
 
